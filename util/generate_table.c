@@ -2,7 +2,7 @@
 #include <memory.h>
 
 
-unsigned char	genration_array[] = "0123456789-.";
+unsigned char	genration_array[] = "0123456789-_abcdefghijklmnopqrstvuwxyzABCDEFGHIJKLMNOPQRSTVUWXYZ?#";
 unsigned int	genration_size = sizeof(genration_array)-1;
 
 int main()
@@ -20,7 +20,7 @@ int main()
 	}
 
 	printf("unsigned char	array[] =\n{\n");
-	for (count=0,index=0;count<8;count++)
+	for (count=0,index=0;count<16;count++)
 	{
 		printf("	");
 		for(count_2=0;count_2<16;count_2++,index++)
@@ -34,7 +34,7 @@ int main()
 				printf("0x00");
 		}
 
-		if (count != 7)
+		if (count != 15)
 			printf(",\n");
 		else
 			printf("\n");
