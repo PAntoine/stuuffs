@@ -27,6 +27,8 @@ void	find_names(void)
 	static struct ifreq ifreqs[20];
 	struct ifconf ifconf;
 	int  nifaces, i;
+	unsigned long	net_mask = inet_addr("255.255.255.0");
+	unsigned long	net_result;
 
 	memset(&ifconf,0,sizeof(ifconf));
 	ifconf.ifc_buf = (char*) (ifreqs);
@@ -43,8 +45,12 @@ void	find_names(void)
 		printf("error: %d\n",err);
 
 	myip = inet_ntoa( ((struct sockaddr_in *)&ifr.ifr_addr)->sin_addr );
-
 	printf("My IP: %s\n",myip);
+
+	net_result = ((struct sockaddr_in *)&ifr.ifr_addr)->sin_addr.s_addr & net_mask;
+	myip = inet_ntoa( net_result );
+
+	printf("Masked: %s\n",myip);
 
 
 	 if((err = ioctl(sock, SIOCGIFCONF , (char*) &ifconf  )) < 0 )
@@ -59,6 +65,7 @@ void	find_names(void)
 //		if ((err = ioctl( sock, SIOCGIFADDR, &ifreqs[i] )) < 0)
 //			printf("error: %d\n",err);
 
+		printf("%p \n",((struct sockaddr_in *)&ifreqs[i].ifr_addr)->sin_addr);
 		myip = inet_ntoa( ((struct sockaddr_in *)&ifreqs[i].ifr_addr)->sin_addr );
 		printf("My IP: %s\n",myip);
 	}
