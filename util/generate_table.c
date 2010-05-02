@@ -2,7 +2,7 @@
 #include <memory.h>
 
 
-unsigned char	genration_array[] = "0123456789-_abcdefghijklmnopqrstvuwxyzABCDEFGHIJKLMNOPQRSTVUWXYZ?#";
+unsigned char	genration_array[] = "0123456789-abcdefghijklmnopqrstvuwxyzABCDEFGHIJKLMNOPQRSTVUWXYZ";
 unsigned int	genration_size = sizeof(genration_array)-1;
 
 int main()
@@ -14,10 +14,22 @@ int main()
 
 	memset(array,0,255);
 
-	for (count=0;count<genration_size;count++)
-	{
-		array[genration_array[count]] = 1;
-	}
+//	for (count=0;count<genration_size;count++)
+//	{
+//		array[genration_array[count]] = 1;
+//	}
+
+	/* safe chars rubbish */
+	for (count=0x20;count<0x7f;count++)
+		array[count] = 1;
+
+	array['\t'] = 1;
+
+	array[':'] = 0;
+	array[';'] = 0;
+	array[','] = 0;
+	array['"'] = 0;
+
 
 	printf("unsigned char	array[] =\n{\n");
 	for (count=0,index=0;count<16;count++)
