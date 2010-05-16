@@ -1,17 +1,3 @@
-/*-------------------------------------------------------------------------------------*
- *
- * name:  server.c
- * proj:  Miniweb browser version 3
- *
- * desc:  POP3.
- *
- * auth:  Peter Antoine  
- * date:  13/05/2010
- *
- *               Copyright (c) 2009 Miniweb Interactive.
- *                       All rights Reserved.
- *-------------------------------------------------------------------------------------*/
-
 #include "pop3.h"
 #include <winsock2.h>
 
