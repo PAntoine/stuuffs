@@ -1,16 +1,3 @@
-/*-------------------------------------------------------------------------------------*
- *
- * name:  pop3.h
- * proj:  Miniweb browser version 3
- *
- * desc:  
- *
- * auth:  Peter Antoine  
- * date:  14/05/2010
- *
- *               Copyright (c) 2009 Miniweb Interactive.
- *                       All rights Reserved.
- *-------------------------------------------------------------------------------------*/
 #ifndef  __POP3_H__
 #define  __POP3_H__
 #include <winsock2.h>
