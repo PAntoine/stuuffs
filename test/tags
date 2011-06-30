@@ -1,0 +1,138 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.7	//
+A1C_APPLICATION	.\ASN1_decoder.h	/^	A1C_APPLICATION			= 0x01,$/;"	e	enum:__anon2
+A1C_CONTEXT_SPECIFIC	.\ASN1_decoder.h	/^	A1C_CONTEXT_SPECIFIC	= 0x02,$/;"	e	enum:__anon2
+A1C_PRIVATE	.\ASN1_decoder.h	/^	A1C_PRIVATE				= 0x03$/;"	e	enum:__anon2
+A1C_UNIVERSAL	.\ASN1_decoder.h	/^	A1C_UNIVERSAL			= 0x00,$/;"	e	enum:__anon2
+A1P_CONSTRUCTED	.\ASN1_decoder.h	/^	A1P_CONSTRUCTED	= 1$/;"	e	enum:__anon3
+A1P_PRIMITIVE	.\ASN1_decoder.h	/^	A1P_PRIMITIVE  	= 0,$/;"	e	enum:__anon3
+A1UC_BITSTRING_TYPE	.\ASN1_decoder.h	/^	A1UC_BITSTRING_TYPE			= 3,$/;"	e	enum:__anon4
+A1UC_BMPSTRING_TYPE	.\ASN1_decoder.h	/^	A1UC_BMPSTRING_TYPE			= 30$/;"	e	enum:__anon4
+A1UC_BOOLEAN_TYPE	.\ASN1_decoder.h	/^	A1UC_BOOLEAN_TYPE			= 1,$/;"	e	enum:__anon4
+A1UC_EMBEDDED_PDV_TYPE	.\ASN1_decoder.h	/^	A1UC_EMBEDDED_PDV_TYPE		= 11,$/;"	e	enum:__anon4
+A1UC_ENUMERATED_TYPE	.\ASN1_decoder.h	/^	A1UC_ENUMERATED_TYPE		= 10,$/;"	e	enum:__anon4
+A1UC_EXTERNAL_TYPE	.\ASN1_decoder.h	/^	A1UC_EXTERNAL_TYPE			= 8,$/;"	e	enum:__anon4
+A1UC_GENERALIZED_TIME_TYPE	.\ASN1_decoder.h	/^	A1UC_GENERALIZED_TIME_TYPE	= 24,$/;"	e	enum:__anon4
+A1UC_GENERALSTRING_TYPE	.\ASN1_decoder.h	/^	A1UC_GENERALSTRING_TYPE		= 27,$/;"	e	enum:__anon4
+A1UC_GRAPHICSTRING_TYPE	.\ASN1_decoder.h	/^	A1UC_GRAPHICSTRING_TYPE		= 25,$/;"	e	enum:__anon4
+A1UC_IA5STRING_TYPE	.\ASN1_decoder.h	/^	A1UC_IA5STRING_TYPE			= 22,$/;"	e	enum:__anon4
+A1UC_INTEGER_TYPE	.\ASN1_decoder.h	/^	A1UC_INTEGER_TYPE			= 2,$/;"	e	enum:__anon4
+A1UC_NOT_USED	.\ASN1_decoder.h	/^	A1UC_NOT_USED				= 0,$/;"	e	enum:__anon4
+A1UC_NULL_TYPE	.\ASN1_decoder.h	/^	A1UC_NULL_TYPE				= 5,$/;"	e	enum:__anon4
+A1UC_NUMERICSTRING_TYPE	.\ASN1_decoder.h	/^	A1UC_NUMERICSTRING_TYPE		= 18,$/;"	e	enum:__anon4
+A1UC_OBJECT_DESCRIPTOR_TYPE	.\ASN1_decoder.h	/^	A1UC_OBJECT_DESCRIPTOR_TYPE	= 7,$/;"	e	enum:__anon4
+A1UC_OBJECT_IDENTIFIER_TYPE	.\ASN1_decoder.h	/^	A1UC_OBJECT_IDENTIFIER_TYPE	= 6,$/;"	e	enum:__anon4
+A1UC_OCTETSTRING_TYPE	.\ASN1_decoder.h	/^	A1UC_OCTETSTRING_TYPE		= 4,$/;"	e	enum:__anon4
+A1UC_PRINTABLESTRING_TYPE	.\ASN1_decoder.h	/^	A1UC_PRINTABLESTRING_TYPE	= 19,$/;"	e	enum:__anon4
+A1UC_REAL_TYPE	.\ASN1_decoder.h	/^	A1UC_REAL_TYPE				= 9,$/;"	e	enum:__anon4
+A1UC_RELATIVE_OBJECT_TYPE	.\ASN1_decoder.h	/^	A1UC_RELATIVE_OBJECT_TYPE	= 13,$/;"	e	enum:__anon4
+A1UC_SEQUENCE_TYPE	.\ASN1_decoder.h	/^	A1UC_SEQUENCE_TYPE			= 16,$/;"	e	enum:__anon4
+A1UC_SET_TYPE	.\ASN1_decoder.h	/^	A1UC_SET_TYPE				= 17,$/;"	e	enum:__anon4
+A1UC_TELETEXSTRING_TYPE	.\ASN1_decoder.h	/^	A1UC_TELETEXSTRING_TYPE 	= 20,$/;"	e	enum:__anon4
+A1UC_UNIVERSALSTRING_TYPE	.\ASN1_decoder.h	/^	A1UC_UNIVERSALSTRING_TYPE	= 28,$/;"	e	enum:__anon4
+A1UC_UTC_TIME_TYPE	.\ASN1_decoder.h	/^	A1UC_UTC_TIME_TYPE			= 23,$/;"	e	enum:__anon4
+A1UC_UTF8STRING_TYPE	.\ASN1_decoder.h	/^	A1UC_UTF8STRING_TYPE		= 12,$/;"	e	enum:__anon4
+A1UC_VIDEOTEXSTRING_TYPE	.\ASN1_decoder.h	/^	A1UC_VIDEOTEXSTRING_TYPE	= 21,$/;"	e	enum:__anon4
+A1UC_VISIBLESTRING_TYPE	.\ASN1_decoder.h	/^	A1UC_VISIBLESTRING_TYPE 	= 26,$/;"	e	enum:__anon4
+ASN1_CLASS	.\ASN1_decoder.h	/^} ASN1_CLASS;$/;"	t	typeref:enum:__anon2
+ASN1_GetNextElement	.\ASN1_decoder.c	/^unsigned int	ASN1_GetNextElement (ASN1_STATUS* asn1, unsigned long* ID_tag,ASN1_CLASS *class, ASN1_PC_TYPE *type, unsigned long* length)$/;"	f
+ASN1_PC_TYPE	.\ASN1_decoder.h	/^} ASN1_PC_TYPE;$/;"	t	typeref:enum:__anon3
+ASN1_STATUS	.\ASN1_decoder.h	/^} ASN1_STATUS;$/;"	t	typeref:struct:__anon1
+ASN1_UNIVERSAL_CLASS	.\ASN1_decoder.h	/^} ASN1_UNIVERSAL_CLASS;$/;"	t	typeref:enum:__anon4
+ASN1_initialise	.\ASN1_decoder.c	/^void ASN1_initialise (ASN1_STATUS *asn1, unsigned char* buffer, unsigned int buffer_size)$/;"	f
+F	.\tls_MD5Hash.c	43;"	d	file:
+F	.\tls_MD5Hash_old.c	28;"	d	file:
+F	.\tls_encryption.c	37;"	d	file:
+G	.\tls_MD5Hash.c	44;"	d	file:
+G	.\tls_MD5Hash_old.c	29;"	d	file:
+G	.\tls_encryption.c	38;"	d	file:
+H	.\tls_MD5Hash.c	45;"	d	file:
+H	.\tls_MD5Hash_old.c	30;"	d	file:
+H	.\tls_encryption.c	39;"	d	file:
+HMAC_Pairs	.\test_md5.c	/^} HMAC_Pairs;$/;"	t	typeref:struct:__anon5	file:
+HMAC_function	.\test_md5.c	/^void	HMAC_function(unsigned char* text, unsigned int text_length,unsigned char* key, unsigned int key_length)$/;"	f
+I	.\tls_MD5Hash.c	46;"	d	file:
+I	.\tls_MD5Hash_old.c	31;"	d	file:
+I	.\tls_encryption.c	40;"	d	file:
+MD5HMACHash	.\test_md5.c	/^void	MD5HMACHash(unsigned char* kpad,unsigned char *text,unsigned int text_length,unsigned char* digest)$/;"	f
+ROTATE_LEFT	.\tls_MD5Hash.c	48;"	d	file:
+ROTATE_LEFT	.\tls_MD5Hash_old.c	33;"	d	file:
+ROTATE_LEFT	.\tls_encryption.c	42;"	d	file:
+WriteSize	.\test.cpp	20;"	d	file:
+WriteSize	.\test.cpp	22;"	d	file:
+WriteSize	.\tls_MD5Hash.c	51;"	d	file:
+WriteSize	.\tls_MD5Hash.c	53;"	d	file:
+WriteSize	.\tls_MD5Hash_old.c	36;"	d	file:
+WriteSize	.\tls_MD5Hash_old.c	38;"	d	file:
+WriteSize	.\tls_encryption.c	45;"	d	file:
+WriteSize	.\tls_encryption.c	47;"	d	file:
+aa_key	.\test_md5.c	/^unsigned char aa_key[] = {0xaa,0xaa,0xaa,0xaa,0xaa,0xaa,0xaa,0xaa,0xaa,0xaa,0xaa,0xaa,0xaa,0xaa,0xaa,0xaa};$/;"	v
+asn1_data	.\ASN1_decoder.h	/^	unsigned char	*asn1_data;$/;"	m	struct:__anon1
+current_offset	.\ASN1_decoder.h	/^	unsigned int	current_offset;$/;"	m	struct:__anon1
+data	.\test_md5.c	/^		unsigned char*	data;$/;"	m	struct:__anon5	file:
+data_bit	.\test.cpp	/^static unsigned long int data_bit[] = $/;"	v	file:
+data_bit	.\tls_MD5Hash.c	/^static unsigned int data_bit[] = $/;"	v	file:
+data_bit	.\tls_MD5Hash_old.c	/^static unsigned int data_bit[] = $/;"	v	file:
+data_bit	.\tls_encryption.c	/^static unsigned int data_bit[] = $/;"	v	file:
+data_mask	.\test.cpp	/^static unsigned long int data_mask[] = $/;"	v	file:
+data_mask	.\tls_MD5Hash.c	/^static unsigned int data_mask[] = $/;"	v	file:
+data_mask	.\tls_MD5Hash_old.c	/^static unsigned int data_mask[] = $/;"	v	file:
+data_mask	.\tls_encryption.c	/^static unsigned int data_mask[] = $/;"	v	file:
+data_size	.\ASN1_decoder.h	/^	unsigned int	data_size;$/;"	m	struct:__anon1
+dd_data	.\test_md5.c	/^unsigned char dd_data[] = { 0xdd,0xdd,0xdd,0xdd,0xdd,0xdd,0xdd,0xdd,0xdd,0xdd,0xdd,0xdd,0xdd,0xdd,0xdd,0xdd,$/;"	v
+empty_buffer	.\test.cpp	/^static unsigned long int empty_buffer[16];$/;"	v	file:
+empty_buffer	.\tls_MD5Hash.c	/^static unsigned int empty_buffer[16];$/;"	v	file:
+empty_buffer	.\tls_MD5Hash_old.c	/^static unsigned int empty_buffer[16];$/;"	v	file:
+empty_buffer	.\tls_encryption.c	/^static unsigned int empty_buffer[16];$/;"	v	file:
+homeserver_cert_der	.\homeserver.h	/^static unsigned char homeserver_cert_der[] = $/;"	v
+homeserver_cert_der_size	.\homeserver.h	/^static unsigned int homeserver_cert_der_size = sizeof(homeserver_cert_der);$/;"	v
+key	.\test_md5.c	/^		unsigned char*	key;$/;"	m	struct:__anon5	file:
+length	.\test_md5.c	/^		unsigned int	length;$/;"	m	struct:__anon5	file:
+main	.\asn1_test.c	/^void main()$/;"	f
+main	.\sin_stuffs.c	/^void	main()$/;"	f
+main	.\test.cpp	/^int main()$/;"	f
+main	.\test_md5.c	/^void main()$/;"	f
+main	.\tls_md5_old.c	/^void main()$/;"	f
+md5_padding	.\tls_MD5Hash.c	/^static	unsigned char	md5_padding[64] = {	0x80,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,$/;"	v	file:
+md5_padding	.\tls_MD5Hash_old.c	/^static	unsigned char	md5_padding[64] = {	0x80,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,$/;"	v	file:
+md5_padding	.\tls_encryption.c	/^static	unsigned char	md5_padding[64] = {	0x80,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,$/;"	v	file:
+md5_sin_table	.\sin_stuffs.c	/^static	unsigned long	md5_sin_table[64];$/;"	v	file:
+md5_sin_table	.\tls_MD5Hash.c	/^static	unsigned int	md5_sin_table[65];$/;"	v	file:
+md5_sin_table	.\tls_MD5Hash_old.c	/^static	unsigned int	md5_sin_table[65];$/;"	v	file:
+md5_sin_table	.\tls_encryption.c	/^static	unsigned int	md5_sin_table[65];$/;"	v	file:
+ob_key	.\test_md5.c	/^unsigned char ob_key[] = {0x0b,0x0b,0x0b,0x0b,0x0b,0x0b,0x0b,0x0b,0x0b,0x0b,0x0b,0x0b,0x0b,0x0b,0x0b,0x0b};$/;"	v
+test_array	.\test_md5.c	/^char*	test_array[] = {	"",$/;"	v
+test_array	.\tls_md5_old.c	/^char*	test_array[] = {	"",$/;"	v
+test_data	.\test_md5.c	/^HMAC_Pairs	test_data[] = {	{ob_key,"Hi There",sizeof(ob_key)},$/;"	v
+tls_MD5CopyBlock	.\test.cpp	/^unsigned long*	tls_MD5CopyBlock ( unsigned char* buffer, unsigned long int* md5_buffer )$/;"	f
+tls_MD5CopyBlock	.\tls_MD5Hash.c	/^unsigned int*	tls_MD5CopyBlock ( unsigned char* buffer, unsigned int* md5_buffer )$/;"	f
+tls_MD5CopyBlock	.\tls_MD5Hash_old.c	/^unsigned int*	tls_MD5CopyBlock ( unsigned char* buffer, unsigned int* md5_buffer )$/;"	f
+tls_MD5CopyBlock	.\tls_encryption.c	/^unsigned int*	tls_MD5CopyBlock ( unsigned char* buffer, unsigned int* md5_buffer )$/;"	f
+tls_MD5Finish	.\tls_MD5Hash.c	/^void	tls_MD5Finish ( unsigned char* input_buffer, unsigned int input_size_bits, unsigned int* md5_digest, unsigned int total_bits, unsigned char* md5_hash )$/;"	f
+tls_MD5Hash	.\test.cpp	/^void	tls_MD5Hash ( unsigned char* input_buffer, unsigned long input_size_bits, unsigned long* md5_hash )$/;"	f
+tls_MD5Hash	.\tls_MD5Hash.c	/^unsigned int	tls_MD5Hash ( unsigned char* input_buffer, unsigned int input_size_bits, unsigned int* md5_digest )$/;"	f
+tls_MD5Hash	.\tls_MD5Hash_old.c	/^void	tls_MD5Hash ( unsigned char* input_buffer, unsigned int input_size_bits, unsigned char* md5_hash )$/;"	f
+tls_MD5Hash	.\tls_encryption.c	/^void	tls_MD5Hash ( unsigned char* input_buffer, unsigned int input_size_bits, unsigned char* md5_hash )$/;"	f
+tls_MD5Init	.\tls_MD5Hash.c	/^void	tls_MD5Init ( unsigned int* md5_digest )$/;"	f
+tls_MD5Init	.\tls_MD5Hash_old.c	/^void tls_MD5Init ( void )$/;"	f
+tls_MD5Init	.\tls_encryption.c	/^void tls_MD5Init ( void )$/;"	f
+tls_MD5Round1	.\tls_MD5Hash.c	/^unsigned int tls_MD5Round1 ( unsigned int a, unsigned int b, unsigned int c, unsigned int d , unsigned int k, unsigned int s, unsigned int i, unsigned int* data)$/;"	f
+tls_MD5Round1	.\tls_MD5Hash_old.c	/^unsigned int tls_MD5Round1 ( unsigned int a, unsigned int b, unsigned int c, unsigned int d , unsigned int k, unsigned int s, unsigned int i, unsigned int* data)$/;"	f
+tls_MD5Round1	.\tls_encryption.c	/^unsigned int tls_MD5Round1 ( unsigned int a, unsigned int b, unsigned int c, unsigned int d , unsigned int k, unsigned int s, unsigned int i, unsigned int* data)$/;"	f
+tls_MD5Round2	.\tls_MD5Hash.c	/^unsigned int tls_MD5Round2 ( unsigned int a, unsigned int b, unsigned int c, unsigned int d , unsigned int k, unsigned int s, unsigned int i, unsigned int* data)$/;"	f
+tls_MD5Round2	.\tls_MD5Hash_old.c	/^unsigned int tls_MD5Round2 ( unsigned int a, unsigned int b, unsigned int c, unsigned int d , unsigned int k, unsigned int s, unsigned int i, unsigned int* data)$/;"	f
+tls_MD5Round2	.\tls_encryption.c	/^unsigned int tls_MD5Round2 ( unsigned int a, unsigned int b, unsigned int c, unsigned int d , unsigned int k, unsigned int s, unsigned int i, unsigned int* data)$/;"	f
+tls_MD5Round3	.\tls_MD5Hash.c	/^unsigned int tls_MD5Round3 ( unsigned int a, unsigned int b, unsigned int c, unsigned int d , unsigned int k, unsigned int s, unsigned int i, unsigned int* data)$/;"	f
+tls_MD5Round3	.\tls_MD5Hash_old.c	/^unsigned int tls_MD5Round3 ( unsigned int a, unsigned int b, unsigned int c, unsigned int d , unsigned int k, unsigned int s, unsigned int i, unsigned int* data)$/;"	f
+tls_MD5Round3	.\tls_encryption.c	/^unsigned int tls_MD5Round3 ( unsigned int a, unsigned int b, unsigned int c, unsigned int d , unsigned int k, unsigned int s, unsigned int i, unsigned int* data)$/;"	f
+tls_MD5Round4	.\tls_MD5Hash.c	/^unsigned int tls_MD5Round4 ( unsigned int a, unsigned int b, unsigned int c, unsigned int d , unsigned int k, unsigned int s, unsigned int i, unsigned int* data)$/;"	f
+tls_MD5Round4	.\tls_MD5Hash_old.c	/^unsigned int tls_MD5Round4 ( unsigned int a, unsigned int b, unsigned int c, unsigned int d , unsigned int k, unsigned int s, unsigned int i, unsigned int* data)$/;"	f
+tls_MD5Round4	.\tls_encryption.c	/^unsigned int tls_MD5Round4 ( unsigned int a, unsigned int b, unsigned int c, unsigned int d , unsigned int k, unsigned int s, unsigned int i, unsigned int* data)$/;"	f
+tls_MD5Setup	.\tls_MD5Hash.c	/^void tls_MD5Setup ( void )$/;"	f
+tls_ProcessBlock	.\tls_MD5Hash.c	/^void tls_ProcessBlock ( unsigned int* A, unsigned int* B,unsigned int* C,unsigned int* D, unsigned int* data)$/;"	f
+tls_ProcessBlock	.\tls_MD5Hash_old.c	/^void tls_ProcessBlock ( unsigned int* A, unsigned int* B,unsigned int* C,unsigned int* D, unsigned int* data)$/;"	f
+tls_ProcessBlock	.\tls_encryption.c	/^void tls_ProcessBlock ( unsigned int* A, unsigned int* B,unsigned int* C,unsigned int* D, unsigned int* data)$/;"	f
