@@ -1,9 +1,17 @@
-"                                 HomeNet
+"                Peter's Generic VimScript
 "
-" This file is the basic vim script file for HomeNet project.
-" It has the default file command layouts. 
+" This file is the basic vim script file for my projects.
+" It has the default file command layouts.
 "
-"                 Copyright (c) 2010 AntoineComputers
+" Also, it has allows for the root directory of a project to have
+" a .banner and .copyright file. If either of these files are
+" present then the content is incorporated into the file header.
+"
+" This file also has various simple commands that make coding
+" a little easier.
+"
+"           Copyright (c) 2010 & 2011 Peter Antoine
+"             Released under the Artistic Licence
 "
 " Author: Peter Antoine 
 " Date  : 16th Feb 2010
@@ -118,6 +126,11 @@ function HOMENET_put_vhdl_file_header()
 	call setpos(".",[0,s:insert_line,s:insert_row,-1])
 endfunction
 
+function HOMENET_put_vim_file_header()
+	call HOMENET_file_header(1,s:top_line,"\" ","\" ","")
+	call setpos(".",[0,s:insert_line,s:insert_row,-1])
+endfunction
+
 function HOMENET_add_frame()
 	call append(line("."),"")
 	call append(line(".")," *--------------------------------------------------------------------------------*/")
@@ -187,6 +200,7 @@ endfunction
 au BufNewFile *.h call HOMENET_put_hdr_file_header()
 au BufNewFile *.c call HOMENET_put_src_file_header()
 au BufNewFile *.m call HOMENET_put_src_file_header()
+au BufNewFile *.vim call HOMENET_put_vim_file_header()
 au BufNewFile *.cpp call HOMENET_put_src_file_header()
 au BufNewFile *.vhdl call HOMENET_put_vhdl_file_header()
 au BufNewFile *.java call HOMENET_put_java_file_header()
