@@ -1,0 +1,117 @@
+:set nocp
+
+"Stop my config options being overridden by annoying ones
+:filetype plugin indent off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" non-github plugins
+Bundle '/mnt/development/vimgitlog.git'
+Bundle '/mnt/development/TimeKeeper.git'
+
+" GitHub plugins
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'sjl/gundo.vim'
+Bundle 'Raimondi/delimitMate'
+Bundle 'godlygeek/csapprox'
+Bundle 'godlygeek/tabular'
+" Bundle 'vim-scripts/vimprj'  --- needs a dependancy will re-vist
+
+:set showcmd
+:set guioptions=agim
+:set spell spelllang=en_gb
+:set hidden
+:set tabstop=4
+:set shiftwidth=4
+:set noexpandtab
+:set formatoptions=croq
+:set nocst
+:set csto=1
+:set ai
+:set cindent
+:set scs
+:set nohls
+:set incsearch
+:set ignorecase
+:set smartcase
+:set ru
+:set cot=
+:set bs=eol,indent,start
+:set laststatus=2
+:set comments+=b:---
+:syntax enable
+:set ruler
+:hi SpellBad guisp=darkred
+:map <C-c> "+y
+:map <C-p> "+p
+:map <silent> <F7> :call GITLOG_ToggleWindows()<cr>
+:map <silent> <F6> :call GundoToggle()<cr>
+:map <silent> <f5> :NERDTreeToggle<cr>
+:map <f1> <nop>
+
+" Lets turn time tracking on
+let g:TimeKeeperStartOnLoad = 1
+let g:TimeKeeperUseAnnotatedTags = 1
+let g:TimeKeeperTagPrefix = 'start_'
+
+" CTRL-A is Select all
+noremap <C-A> gggH<C-O>G
+inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
+cnoremap <C-A> <C-C>gggH<C-O>G
+onoremap <C-A> <C-C>gggH<C-O>G
+snoremap <C-A> <C-C>gggH<C-O>G
+xnoremap <C-A> <C-C>ggVG
+
+" CTRL-Tab is Next Tab
+noremap <C-Tab> :tabn<cr>
+
+" Windows movement commands
+:map <C-Up> <C-w><Up>
+:map <C-Down> <C-w><Down>
+:map <C-Left> <C-w><Left>
+:map <C-Right> <C-w><Right>
+
+"Centre stuff on search
+:nnoremap n nzz
+:nnoremap N Nzz
+:nnoremap * *zz
+:nnoremap # #zz
+:nnoremap g* g*zz
+:nnoremap g# g#zz
+:nnoremap <C-]> <C-]>zz
+:nnoremap <C-t> <C-t>zz
+
+:colo slate
+
+:set statusline=[%n]\ %t%m%=\ %l-%L\ %%%p\ [%{&ff}]
+
+":so ~/source-tree/management/homenet.vim
+
+:if !exists("autocommands_loaded")
+:	let autocommands_loaded = 1
+:	au VimEnter * let &path = getcwd() . "/**/include"
+:endif
+
+"OS specific settings
+if has("win32")
+	"Windows options here
+else
+	if has("unix")
+		"Linux specific stuff
+		:set guifont=Liberation\ Mono\ 9
+
+		let s:uname = system("uname")
+		if s:uname == "Darwin\n"
+			"Mac options here
+		endif
+	endif
+endif
+
+:set colorcolumn=140
+:hi ColorColumn ctermbg=lightgrey guibg=grey16
