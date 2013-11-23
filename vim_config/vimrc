@@ -6,6 +6,9 @@
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" To install vundle on a new machine do the following	
+"git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
@@ -18,10 +21,7 @@ Bundle '/mnt/development/TimeKeeper.git'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'sjl/gundo.vim'
-Bundle 'Raimondi/delimitMate'
-Bundle 'godlygeek/csapprox'
-Bundle 'godlygeek/tabular'
-" Bundle 'vim-scripts/vimprj'  --- needs a dependancy will re-vist
+Bundle 'jmcantrell/vim-virtualenv'
 
 :set showcmd
 :set guioptions=agim
@@ -50,15 +50,28 @@ Bundle 'godlygeek/tabular'
 :hi SpellBad guisp=darkred
 :map <C-c> "+y
 :map <C-p> "+p
+:map <silent> <F8> :call TimeKeeper_ToggleTaskWindow()<cr>
 :map <silent> <F7> :call GITLOG_ToggleWindows()<cr>
-:map <silent> <F6> :call GundoToggle()<cr>
+:map <silent> <F6> :GundoToggle<cr>
 :map <silent> <f5> :NERDTreeToggle<cr>
 :map <f1> <nop>
+:set efm=%*[^\"]\"%f\"%*\\D%l:\ %m\,\"%f\"%*\\D%l:\ %m\,%-G%f:%l:\ (Each\ undeclared\ identifier\ is\ reported\ only\ once\,%-G%f:%l:\ for\ each\ function\ it\ appears\ in.)\,%-GIn\ file\ included\ from\ %f:%l:\,%-GIn\ file\ included\ from\ %f:%l:%c\,%-GIn\ file\ included\ from\ %f:%l\,%-Gfrom\ %f:%l:%c\,%-Gfrom\ %f:%l\,%f:%l:%c:%m\,%f(%l):%m\,%f:%l:%m\,\"%f\"\\,\ line\ %l%*\\D%c%*[^\ ]\ %m\,%D%*\\a[%*\\d]:\ Entering\ directory\ `%f'\,%X%*\\a[%*\\d]:\ Leaving\ directory\ `%f'\,%D%*\\a:\ Entering\ directory\ `%f'\,%X%*\\a:\ Leaving\ directory\ `%f'\,%DMaking\ %*\\a\ in\ %f\,%f\|%l\|\ %m
 
 " Lets turn time tracking on
 let g:TimeKeeperStartOnLoad = 1
 let g:TimeKeeperUseAnnotatedTags = 1
 let g:TimeKeeperTagPrefix = 'start_'
+let g:TimeKeeperUseFlatFile = 0
+
+" virtualenv setup
+let g:virtualenv_directory = '/home/pantoine/development/python'
+
+" Boern setup
+let g:BeornVirtualEnvForBeorn = 'py_test'
+let g:BeornStartOnLoad = 1
+
+" Nasty DEBUG!!
+:so /home/pantoine/development/beorn/beorn_plugins/vim/plugin/beorn.vim
 
 " CTRL-A is Select all
 noremap <C-A> gggH<C-O>G
@@ -91,7 +104,13 @@ noremap <C-Tab> :tabn<cr>
 
 :set statusline=[%n]\ %t%m%=\ %l-%L\ %%%p\ [%{&ff}]
 
-":so ~/source-tree/management/homenet.vim
+" Gitlog settings.
+:let g:GITLOG_default_mode = 2
+:map <silent> <f7> :call GITLOG_ToggleWindows()<cr>
+:map <silent> <c-f7> :call GITLOG_FlipWindows()<cr>
+
+" Add .md as a default markdown type.
+autocmd BufNew,BufNewFile,BufRead *.md,*.markdown setlocal ft=markdown
 
 :if !exists("autocommands_loaded")
 :	let autocommands_loaded = 1

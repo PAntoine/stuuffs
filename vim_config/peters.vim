@@ -122,6 +122,15 @@ function HOMENET_put_bash_file_header()
 	call setpos(".",[0,s:insert_line,s:insert_row,-1])
 endfunction
 
+function HOMENET_put_py_file_header()
+	call setline(1,"#!/usr/bin/env python")
+	call setline(2,"# -*- coding: utf-8 -*-")
+	call HOMENET_file_header(3,s:top_line,"#","#","")
+	call setline(line('$')+1,"")
+	call setline(line('$')+1,"# vim: ts=4 sw=4 noexpandtab nocin ai")	" should add to the end
+	call setpos(".",[0,s:insert_line,s:insert_row,-1])
+endfunction
+
 function HOMENET_put_java_file_header()
 	call HOMENET_file_header(1,s:top_line,"//","//","")
 	call setpos(".",[0,s:insert_line,s:insert_row,-1])
@@ -216,6 +225,7 @@ au BufNewFile *.aidl call HOMENET_put_java_file_header()
 au BufNewFile *.sh call HOMENET_put_bash_file_header()
 au BufNewFile *.mak call HOMENET_put_mak_file_header()
 au BufNewFile *.xml call HOMENET_put_xml_file_header()
+au BufNewFile *.py call HOMENET_put_py_file_header()
 au BufNewFile makefile call HOMENET_put_mak_file_header()
 
 " Set the mappings for the other stuff
