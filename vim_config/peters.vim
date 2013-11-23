@@ -154,6 +154,23 @@ function HOMENET_add_frame()
 	call setpos(".",[0,line(".")+2,3,-1])
 endfunction
 
+function HOMENET_add_api()
+	let function_name = input("Function Name: ")
+
+	if ( function_name != '')
+		let return_type = input("Return Type: ","void")
+
+		let cur_pos = line(".")
+		call HOMENET_write_api(function_name,return_type,"")
+		call setpos(".",[0,cur_pos+3,17,-1])
+
+		unlet return_type
+	endif
+
+	unlet function_name
+endfunction	
+
+
 function HOMENET_add_function()
 	let function_name = input("Function Name: ")
 
@@ -192,6 +209,32 @@ function HOMENET_write_function(function_name,return_type,parameter_list)
 	endif
 endfunction
 
+function HOMENET_write_api(function_name,return_type,parameter_list)
+
+	if (a:function_name != '')
+		let size = 9
+		let input = ["/**---- API ----------------------------------------------------------------------*",
+					\" *  @api         " . a:function_name,
+					\" *  @description ",
+					\" *  @action ",
+					\" *  @parameter ",
+					\" *  @returns ",
+					\" *--------------------------------------------------------------------------------*/",
+					\a:return_type . "	" . a:function_name . "(" . a:parameter_list . ")",
+					\"{"]
+
+		if (a:return_type != 'void')
+			call extend(input,["	" . a:return_type . " result;","","	return result;","}",""])
+			let size += 4
+		else
+			call extend(input,["}",""])
+		endif
+
+		call append(line("."),input)
+	endif
+endfunction
+
+
 function HOMENET_make_function() range
 
 	let lines = getline(a:firstline,a:lastline)
@@ -229,6 +272,7 @@ au BufNewFile *.py call HOMENET_put_py_file_header()
 au BufNewFile makefile call HOMENET_put_mak_file_header()
 
 " Set the mappings for the other stuff
+map <C-\>a :call HOMENET_add_api()<cr>
 map <C-\>f :call HOMENET_add_function()<cr>
 map <C-\>c :call HOMENET_add_frame()<cr>
 map <C-\>m :call HOMENET_make_function()<cr>
